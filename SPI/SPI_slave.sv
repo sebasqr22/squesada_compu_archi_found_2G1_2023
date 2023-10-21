@@ -11,6 +11,7 @@ module SPI_slave(
 		d, sclk,
 		q, not_q
 	);
+	assign leds[0]=q;
 	
 	assign MISO = CS & q;
 	
