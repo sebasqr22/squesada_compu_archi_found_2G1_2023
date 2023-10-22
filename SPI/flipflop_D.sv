@@ -1,13 +1,12 @@
 module flipflop_D(
-	input logic d, clk,
-	output logic q, not_q
+	input logic d, clk, rst,
+	output logic q
 );
 	
-	logic s, r;
 	
-	assign s = ~(d & clk);
-	assign r = ~(~d & clk);
-	assign q = ~(s & not_q);
-	assign not_q = ~(r & q);
+	always_ff @(posedge clk or posedge rst) begin
+		q <= rst == 1 ? 0:d;
+	end
 	
 endmodule
+	
