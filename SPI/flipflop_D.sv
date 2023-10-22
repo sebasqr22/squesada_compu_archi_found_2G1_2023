@@ -5,7 +5,7 @@ module flipflop_D(
 	
 	
 	always_ff @(posedge clk or posedge rst) begin
-		q <= rst == 1 ? 0:d;
+		q <= rst == 1 ? 255:d;
 	end
 	
 endmodule

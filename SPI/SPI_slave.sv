@@ -1,13 +1,15 @@
 module SPI_slave(
 	input logic MOSI, CS, sclk, rst,
-	output logic MISO, output reg [3:0] leds
+	output logic MISO, output reg [3:0] leds,output resetLed
 );
 	
 	logic d;
-	assign d = MOSI & ~CS;
+	assign d = MOSI & CS;
+	
+	assign resetLed=rst;
 	//SALIDA
 	flipflop_D  ff_d(
-		MOSI, sclk, rst,
+		d, sclk, rst,
 		MISO
 	);
 	
@@ -31,5 +33,7 @@ module SPI_slave(
 		.d(leds[2]), .clk(sclk), .rst(rst),
 		.q(leds[3])
 	);
+	
+	//assign MISO=leds;
 	
 endmodule
