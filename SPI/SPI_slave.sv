@@ -4,15 +4,31 @@ module SPI_slave(
 );
 	
 	logic d, q, not_q;
-	
-	assign d = CS & MOSI;
-	
+	assign d= MOSI & ~CS;
+	//SALIDA
 	flipflop_D  ff_d(
-		d, sclk,
-		q, not_q
+		MOSI, sclk,
+		MISO
 	);
-	assign leds[0]=q;
 	
-	assign MISO = CS & q;
+	//LEDS
+	flipflop_D  ff_led0(
+		d, sclk,
+		leds[0]
+	);
+	flipflop_D  ff_led1(
+		leds[0], sclk,
+		leds[1]
+	);
+	flipflop_D  ff_led2(
+		leds[1], sclk,
+		leds[2]
+	);
+	flipflop_D  ff_led3(
+		leds[2], sclk,
+		leds[3]
+	);
+	
+	
 	
 endmodule
