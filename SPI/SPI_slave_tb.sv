@@ -25,12 +25,15 @@ module SPI_slave_tb();
 		
 		rst = 0;
 		MOSI = 1;
+		$display(MISO);
 		#20
 		
 		MOSI = 0;
+		$display(MISO);
 		#20
 		
 		MOSI = 1;
+		$display(MISO);
 		#20
 		
 		CS = 1;
