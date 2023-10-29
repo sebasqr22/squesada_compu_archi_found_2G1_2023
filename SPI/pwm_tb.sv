@@ -17,10 +17,34 @@ module pwm_tb();
 		#40
 		
 		rst = 1;
-		dutyMultiplier = 5;
+		dutyMultiplier = 0;
 		#1024
 		
 		dutyMultiplier = 1;
+		#1024
+		
+		dutyMultiplier = 2;
+		#1024
+		
+		dutyMultiplier = 3;
+		#1024
+		
+		dutyMultiplier = 4;
+		#1024
+		
+		dutyMultiplier = 5;
+		#1024
+		
+		dutyMultiplier = 6;
+		#1024
+		
+		dutyMultiplier = 7;
+		#1024
+		
+		dutyMultiplier = 8;
+		#1024
+		
+		dutyMultiplier = 9;
 		#1024
 		
 		dutyMultiplier = 10;		
