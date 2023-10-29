@@ -1,9 +1,10 @@
 module SPI_slave(
 	input logic MOSI, CS, sclk, rst,
-	output logic MISO, output reg [3:0] leds,output resetLed
+	output logic MISO, output reg [3:0] leds,output resetLed,output [6:0]res
 );
 	
 	logic d;
+	//reg[6:0] res;
 	assign d = MOSI & CS &~rst;
 	
 	assign resetLed=rst;
@@ -36,6 +37,6 @@ module SPI_slave(
 		.q(leds[3])
 	);
 	
-	//assign MISO=leds;
+	circuitoLogico cl(.A(leds[3]), .B(leds[2]), .C(leds[1]), .D(leds[0]), .res(res));
 	
 endmodule
