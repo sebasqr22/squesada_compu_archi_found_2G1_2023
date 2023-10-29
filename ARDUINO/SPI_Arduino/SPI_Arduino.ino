@@ -13,45 +13,50 @@ void setup() {
 
 void loop() {
     if(handshakeConfirmation){
-      int leds = 10;
+      //int leds = 10;
       int resp=0;
-      Serial.print("Enviando mensaje de activación de LED: ");
-      Serial.println(leds);
-      SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
-      resp=SPI.transfer(leds);
-      if(resp>15){
-        Serial.println("SIN MENSAJE");
-        for(int i=0;i<3;i++){
-          resp=SPI.transfer(leds);
-          if(resp>15 && i==2){
-            Serial.print(i+1);
-            Serial.println("");
-            Serial.println("CONEXION PERDIDA, REINICIE EL SISTEMA");
-            connection=false;
-            break;
-          }
-          if(resp>15){
-            Serial.print(i+1);
-            Serial.print("...");
-          }else{
-            break;
-          }
-          delay(1000);
-        }
-      }else{
-        Serial.println(resp);
-      }
-
-      if(connection){
-        SPI.endTransaction();
-      // Esperar 1.5 segundos
       
-      }else{
-        delay(5000);
-        abort();
-      }
+      SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
+      
+      for(int leds=0;leds<10;leds++){
+        Serial.print("Enviando mensaje de activación de LED: ");
+        Serial.println(leds);
+        resp=SPI.transfer(leds);
+      
+        if(resp>15){
+          Serial.println("SIN MENSAJE");
+          for(int i=0;i<3;i++){
+            resp=SPI.transfer(leds);
+            if(resp>15 && i==2){
+              Serial.print(i+1);
+              Serial.println("");
+              Serial.println("CONEXION PERDIDA, REINICIE EL SISTEMA");
+              connection=false;
+              break;
+            }
+            if(resp>15){
+              Serial.print(i+1);
+              Serial.print("...");
+            }else{
+              break;
+            }
+            delay(1000);
+          }
+        }else{
+          Serial.println(resp);
+        }
 
-      delay(1500);
+        if(connection){
+          SPI.endTransaction();
+        // Esperar 1.5 segundos
+        
+        }else{
+          delay(5000);
+          abort();
+        }
+
+        delay(1500);
+      }
     }
 
     
