@@ -4,14 +4,16 @@ module SPI_slave(
 );
 	
 	logic d;
-	assign d = MOSI & CS;
+	assign d = MOSI & CS &~rst;
 	
 	assign resetLed=rst;
+	assign MISO= rst == 1 ? 255:d;
 	//SALIDA
+	/*
 	flipflop_D  ff_d(
-		d, sclk, rst,
-		MISO
-	);
+		.d(d), .clk(sclk), .rst(rst),
+		.q(MISO)
+	);*/
 	
 	//LEDS
 	flipflop_D  ff_led0(
