@@ -16,7 +16,7 @@ void loop() {
       //int leds = 10;
       int resp=0;
       
-      SPI.beginTransaction(SPISettings(1000000, MSBFIRST, SPI_MODE0));
+      SPI.beginTransaction(SPISettings(10000, MSBFIRST, SPI_MODE0));
       
       for(int leds=0;leds<10;leds++){
         Serial.print("Enviando mensaje de activación de LED: ");

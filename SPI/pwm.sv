@@ -3,21 +3,17 @@ module pwm (
 	output pwm_out
 );
 	
-	reg[8:0] duty;
-	reg [7:0] Q_reg, Q_next;
+	reg [7:0] counter = 0;
+	wire [7:0] duty_cycle;		
+
+	assign duty_cycle = dutyMultiplier * 10; 
+
 	
-	always @ (posedge clk, negedge rst) begin
-		if (!rst)
-			Q_reg = 8'b00000000;
-		else
-			Q_reg = Q_next;
-	end
+	always @(posedge clk) 
+		 counter <= rst ? 0 : (counter < 10) ? counter + 1 : 0;
+
 	
-	always @(*) begin
-		Q_next = Q_reg + 1;
-	end
+	assign pwm_out = (counter < duty_cycle) ? 1 : 0;
 	
-	assign duty = dutyMultiplier * (2**8)/10;
-	assign pwm_out = (Q_reg < duty);
 	
 endmodule
