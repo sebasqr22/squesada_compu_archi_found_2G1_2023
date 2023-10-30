@@ -1,10 +1,10 @@
 module SPI_slave(
 	input logic MOSI, CS, sclk, rst,
-	output logic MISO, output reg [3:0] leds,output resetLed,output [6:0]res
+	output logic MISO, output reg [3:0] leds,output resetLed,output [6:0]res, output pwm_out
 );
 	
 	logic d;
-	//reg[6:0] res;
+	
 	assign d = MOSI & CS &~rst;
 	
 	assign resetLed=rst;
@@ -38,5 +38,6 @@ module SPI_slave(
 	);
 	
 	circuitoLogico cl(.A(leds[3]), .B(leds[2]), .C(leds[1]), .D(leds[0]), .res(res));
+	pwm motor (.dutyMultiplier(leds), .clk(sclk), .rst(rst), .pwm_out(pwm_out) );
 	
 endmodule

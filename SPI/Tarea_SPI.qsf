@@ -78,7 +78,6 @@ set_location_assignment PIN_AD26 -to res[3]
 set_location_assignment PIN_AG28 -to res[4]
 set_location_assignment PIN_AF28 -to res[5]
 set_location_assignment PIN_AE25 -to res[6]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE pwm_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pwm.sv
 set_global_assignment -name SYSTEMVERILOG_FILE circuitoLogico_tb.sv
@@ -87,3 +86,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE SPI_slave.sv
 set_global_assignment -name SYSTEMVERILOG_FILE flipflop_D.sv
 set_global_assignment -name SYSTEMVERILOG_FILE flipflop_D_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SPI_slave_tb.sv
+set_location_assignment PIN_AF27 -to pwm_out
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

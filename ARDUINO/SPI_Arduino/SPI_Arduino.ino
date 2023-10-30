@@ -55,7 +55,7 @@ void loop() {
           abort();
         }
 
-        delay(1500);
+        delay(1000);
       }
     }
 
