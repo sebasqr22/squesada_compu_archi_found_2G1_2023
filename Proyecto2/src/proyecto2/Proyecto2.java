@@ -71,6 +71,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         valores_memoria_multiciclo = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
+        panel_multiciclo = new javax.swing.JPanel();
 
         jLabel5.setText("jLabel5");
 
@@ -202,14 +203,14 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(infor_ejecucion_unicicloLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(jLabel6)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         infor_ejecucion_unicicloLayout.setVerticalGroup(
             infor_ejecucion_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(infor_ejecucion_unicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         valores_registro_uniciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -222,7 +223,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         valores_registro_unicicloLayout.setHorizontalGroup(
             valores_registro_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_registro_unicicloLayout.createSequentialGroup()
-                .addContainerGap(136, Short.MAX_VALUE)
+                .addContainerGap(147, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(111, 111, 111))
         );
@@ -231,7 +232,7 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_registro_unicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         valores_memoria_uniciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -253,7 +254,7 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_memoria_unicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout unicicloLayout = new javax.swing.GroupLayout(uniciclo);
@@ -353,14 +354,14 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(info_ejecucion_multicicloLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(jLabel12)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         info_ejecucion_multicicloLayout.setVerticalGroup(
             info_ejecucion_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(info_ejecucion_multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         valores_registro_multiciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -373,7 +374,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         valores_registro_multicicloLayout.setHorizontalGroup(
             valores_registro_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_registro_multicicloLayout.createSequentialGroup()
-                .addContainerGap(136, Short.MAX_VALUE)
+                .addContainerGap(147, Short.MAX_VALUE)
                 .addComponent(jLabel13)
                 .addGap(111, 111, 111))
         );
@@ -382,7 +383,7 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_registro_multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel13)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         valores_memoria_multiciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -395,7 +396,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         valores_memoria_multicicloLayout.setHorizontalGroup(
             valores_memoria_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_memoria_multicicloLayout.createSequentialGroup()
-                .addContainerGap(128, Short.MAX_VALUE)
+                .addContainerGap(137, Short.MAX_VALUE)
                 .addComponent(jLabel14)
                 .addGap(105, 105, 105))
         );
@@ -404,13 +405,30 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_memoria_multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout panel_multicicloLayout = new javax.swing.GroupLayout(panel_multiciclo);
+        panel_multiciclo.setLayout(panel_multicicloLayout);
+        panel_multicicloLayout.setHorizontalGroup(
+            panel_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panel_multicicloLayout.setVerticalGroup(
+            panel_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 420, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout multicicloLayout = new javax.swing.GroupLayout(multiciclo);
         multiciclo.setLayout(multicicloLayout);
         multicicloLayout.setHorizontalGroup(
             multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(multicicloLayout.createSequentialGroup()
+                .addComponent(info_ejecucion_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valores_registro_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valores_memoria_multiciclo, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
             .addGroup(multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,11 +447,8 @@ public class Proyecto2 extends javax.swing.JFrame {
                         .addComponent(jLabel11)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(multicicloLayout.createSequentialGroup()
-                .addComponent(info_ejecucion_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(valores_registro_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(valores_memoria_multiciclo, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
+                .addComponent(panel_multiciclo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         multicicloLayout.setVerticalGroup(
             multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -448,7 +463,9 @@ public class Proyecto2 extends javax.swing.JFrame {
                     .addComponent(con_ciclo_a_multiciclo)
                     .addComponent(segundos_field_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 450, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panel_multiciclo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(info_ejecucion_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valores_registro_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -468,14 +485,21 @@ public class Proyecto2 extends javax.swing.JFrame {
 
     private void complete_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_multicicloActionPerformed
         // TODO add your handling code here:
+        JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
+        panel_multiciclo.add(imagenMulticiclo).repaint();
     }//GEN-LAST:event_complete_multicicloActionPerformed
 
     private void step_by_step_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_step_by_step_multicicloActionPerformed
         // TODO add your handling code here:
+        JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
+        panel_multiciclo.add(imagenMulticiclo).repaint();
+        
     }//GEN-LAST:event_step_by_step_multicicloActionPerformed
 
     private void con_ciclo_a_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_con_ciclo_a_unicicloActionPerformed
         // TODO add your handling code here:
+        JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
+        panel_multiciclo.add(imagenMulticiclo).repaint();
     }//GEN-LAST:event_con_ciclo_a_unicicloActionPerformed
 
     private void complete_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_unicicloActionPerformed
@@ -584,6 +608,7 @@ public class Proyecto2 extends javax.swing.JFrame {
     private javax.swing.JPanel menu;
     private javax.swing.JPanel multiciclo;
     private javax.swing.JRadioButton multiciclo_radio;
+    private javax.swing.JPanel panel_multiciclo;
     private javax.swing.JTabbedPane pantallas;
     private javax.swing.JTextField segundos_field_multiciclo;
     private javax.swing.JTextField segundos_field_uniciclo;
