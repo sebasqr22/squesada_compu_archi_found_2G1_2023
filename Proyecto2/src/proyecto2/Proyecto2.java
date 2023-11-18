@@ -21,6 +21,8 @@ public class Proyecto2 extends javax.swing.JFrame {
     
     public Proyecto2() {
         initComponents();
+        JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
+        panel_multiciclo.add(imagenMulticiclo).repaint();
         pantallas.setSelectedIndex(0);
     }
 
@@ -72,6 +74,12 @@ public class Proyecto2 extends javax.swing.JFrame {
         valores_memoria_multiciclo = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         panel_multiciclo = new javax.swing.JPanel();
+        Boton_Imm_Multi = new javax.swing.JButton();
+        Boton_Pc_Multi1 = new javax.swing.JButton();
+        Boton_Memoria_Multi = new javax.swing.JButton();
+        Boton_Decode_Multi = new javax.swing.JButton();
+        Boton_Registro_Multi = new javax.swing.JButton();
+        Boton_ALU_Multi = new javax.swing.JButton();
 
         jLabel5.setText("jLabel5");
 
@@ -408,15 +416,84 @@ public class Proyecto2 extends javax.swing.JFrame {
                 .addContainerGap(158, Short.MAX_VALUE))
         );
 
+        Boton_Imm_Multi.setText("Imm");
+        Boton_Imm_Multi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Imm_MultiActionPerformed(evt);
+            }
+        });
+
+        Boton_Pc_Multi1.setText("PC");
+        Boton_Pc_Multi1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Pc_Multi1ActionPerformed(evt);
+            }
+        });
+
+        Boton_Memoria_Multi.setText("Memoria de Instrucciones y Datos");
+        Boton_Memoria_Multi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Memoria_MultiActionPerformed(evt);
+            }
+        });
+
+        Boton_Decode_Multi.setText("Decode");
+        Boton_Decode_Multi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Decode_MultiActionPerformed(evt);
+            }
+        });
+
+        Boton_Registro_Multi.setText("Registros");
+        Boton_Registro_Multi.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        Boton_Registro_Multi.setBorderPainted(false);
+        Boton_Registro_Multi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Boton_Registro_Multi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Registro_MultiActionPerformed(evt);
+            }
+        });
+
+        Boton_ALU_Multi.setText("ALU");
+        Boton_ALU_Multi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_ALU_MultiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panel_multicicloLayout = new javax.swing.GroupLayout(panel_multiciclo);
         panel_multiciclo.setLayout(panel_multicicloLayout);
         panel_multicicloLayout.setHorizontalGroup(
             panel_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_multicicloLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Boton_Pc_Multi1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addComponent(Boton_Memoria_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(Boton_Decode_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addGroup(panel_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Boton_Imm_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel_multicicloLayout.createSequentialGroup()
+                        .addComponent(Boton_Registro_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69)
+                        .addComponent(Boton_ALU_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(191, 191, 191))
         );
         panel_multicicloLayout.setVerticalGroup(
             panel_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGroup(panel_multicicloLayout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addGroup(panel_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Boton_Memoria_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton_Decode_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton_Pc_Multi1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton_Registro_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton_ALU_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addComponent(Boton_Imm_Multi, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout multicicloLayout = new javax.swing.GroupLayout(multiciclo);
@@ -432,22 +509,23 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
                     .addGroup(multicicloLayout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(39, 39, 39)
-                        .addComponent(step_by_step_multiciclo)
-                        .addGap(43, 43, 43)
-                        .addComponent(complete_multiciclo)
-                        .addGap(36, 36, 36)
-                        .addComponent(con_ciclo_a_multiciclo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(segundos_field_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(multicicloLayout.createSequentialGroup()
-                .addComponent(panel_multiciclo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addGroup(multicicloLayout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(39, 39, 39)
+                                .addComponent(step_by_step_multiciclo)
+                                .addGap(43, 43, 43)
+                                .addComponent(complete_multiciclo)
+                                .addGap(36, 36, 36)
+                                .addComponent(con_ciclo_a_multiciclo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(segundos_field_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel11)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(panel_multiciclo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         multicicloLayout.setVerticalGroup(
@@ -463,9 +541,9 @@ public class Proyecto2 extends javax.swing.JFrame {
                     .addComponent(con_ciclo_a_multiciclo)
                     .addComponent(segundos_field_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(panel_multiciclo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(info_ejecucion_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valores_registro_multiciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -485,21 +563,18 @@ public class Proyecto2 extends javax.swing.JFrame {
 
     private void complete_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_multicicloActionPerformed
         // TODO add your handling code here:
-        JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
-        panel_multiciclo.add(imagenMulticiclo).repaint();
+        
     }//GEN-LAST:event_complete_multicicloActionPerformed
 
     private void step_by_step_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_step_by_step_multicicloActionPerformed
         // TODO add your handling code here:
-        JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
-        panel_multiciclo.add(imagenMulticiclo).repaint();
+        
         
     }//GEN-LAST:event_step_by_step_multicicloActionPerformed
 
     private void con_ciclo_a_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_con_ciclo_a_unicicloActionPerformed
         // TODO add your handling code here:
-        JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
-        panel_multiciclo.add(imagenMulticiclo).repaint();
+        
     }//GEN-LAST:event_con_ciclo_a_unicicloActionPerformed
 
     private void complete_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_unicicloActionPerformed
@@ -544,6 +619,30 @@ public class Proyecto2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_uniciclo_radioStateChanged
 
+    private void Boton_Imm_MultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Imm_MultiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Imm_MultiActionPerformed
+
+    private void Boton_Pc_Multi1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Pc_Multi1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Pc_Multi1ActionPerformed
+
+    private void Boton_Memoria_MultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Memoria_MultiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Memoria_MultiActionPerformed
+
+    private void Boton_Decode_MultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Decode_MultiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Decode_MultiActionPerformed
+
+    private void Boton_Registro_MultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Registro_MultiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Registro_MultiActionPerformed
+
+    private void Boton_ALU_MultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ALU_MultiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_ALU_MultiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -581,6 +680,12 @@ public class Proyecto2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_ALU_Multi;
+    private javax.swing.JButton Boton_Decode_Multi;
+    private javax.swing.JButton Boton_Imm_Multi;
+    private javax.swing.JButton Boton_Memoria_Multi;
+    private javax.swing.JButton Boton_Pc_Multi1;
+    private javax.swing.JButton Boton_Registro_Multi;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;

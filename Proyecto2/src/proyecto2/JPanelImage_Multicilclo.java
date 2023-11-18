@@ -29,16 +29,39 @@ public class JPanelImage_Multicilclo extends JLabel {
 
     @Override
     public void paint(Graphics g) {
-        ImageIcon img =new ImageIcon(getClass().getResource(path));
-        g.drawImage(img.getImage(), 0, 0, x,y,null);
+        pintarGonito(g,true);
+        //ImageIcon img =new ImageIcon(getClass().getResource(path));
+        //g.drawImage(img.getImage(), 0, 0, x,y,null);
         
-        
-        /*Graphics2D g2d=(Graphics2D)g;
+        /*
+        Graphics2D g2d=(Graphics2D)g;
         BasicStroke grosor=new BasicStroke(5);
         g2d.setStroke(grosor);
         g2d.setColor(Color.BLUE);
         
-        g2d.drawLine(63, 105, 98, 105);*/
+        g2d.drawLine(63, 105, 98, 105);
+        
+        g2d.setColor(Color.GREEN);
+        
+        g2d.drawLine(63, 25, 40, 105);*/
+    }
+    
+    public void pintarGonito(Graphics g, boolean flag){
+        if(flag){
+           Graphics2D g2d=(Graphics2D)g;
+        BasicStroke grosor=new BasicStroke(5);
+        g2d.setStroke(grosor);
+        g2d.setColor(Color.BLUE);
+        
+        g2d.drawLine(63, 105, 98, 105);
+        
+        g2d.setColor(Color.GREEN);
+        
+        g2d.drawLine(63, 25, 40, 105); 
+        }
+        
+        
+        
     }
     
     
