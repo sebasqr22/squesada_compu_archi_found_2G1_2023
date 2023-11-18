@@ -19,27 +19,15 @@ public class Proyecto2 extends javax.swing.JFrame {
      * Creates new form a
      */
     private int pantallaSeleccionada = 1;
+    private LineasUniciclo lineas_uni;
     
     //Lineas para uniciclo
-    private LineLabel PCplus4_uni;
-    private LineLabel PCTarget_uni;   
-    private LineLabel PCtoImem;   
-    private ArrayList<LineLabel> memDtoALU_uni = new ArrayList<>();
+
     
     public Proyecto2() {
         initComponents();
         pantallas.setSelectedIndex(0);
-        
-        this.PCplus4_uni = new LineLabel(panel_uniciclo, 60, 140, 100, 140);
-        this.panel_uniciclo.add(this.PCplus4_uni).repaint();
-        
-        this.PCTarget_uni = new LineLabel(panel_uniciclo, 60, 175, 100, 175);
-        this.panel_uniciclo.add(this.PCTarget_uni).repaint();
-    }
-    
-    public void resaltarCamino(ArrayList<LineLabel> camino){
-        for(LineLabel linea: camino)
-            linea.resaltarLinea();
+        lineas_uni = new LineasUniciclo(this.panel_uniciclo);
     }
 
     /**
