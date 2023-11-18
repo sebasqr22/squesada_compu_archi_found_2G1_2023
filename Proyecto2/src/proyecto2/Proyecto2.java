@@ -18,10 +18,12 @@ public class Proyecto2 extends javax.swing.JFrame {
      * Creates new form a
      */
     private int pantallaSeleccionada = 1;
+    private crearLinea alu_registro = new crearLinea();
     
     public Proyecto2() {
         initComponents();
         pantallas.setSelectedIndex(0);
+        getContentPane().add(alu_registro); //SIEMPRE AGREGAR ESTO POR CADA OBJETO
     }
 
     /**
