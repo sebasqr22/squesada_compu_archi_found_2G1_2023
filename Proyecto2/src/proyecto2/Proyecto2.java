@@ -18,12 +18,14 @@ public class Proyecto2 extends javax.swing.JFrame {
      * Creates new form a
      */
     private int pantallaSeleccionada = 1;
+    private crearLinea alu_registro = new crearLinea();
     
     public Proyecto2() {
         initComponents();
         JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo, "/imagenes/multiciclo.png");
         panel_multiciclo.add(imagenMulticiclo).repaint();
         pantallas.setSelectedIndex(0);
+        getContentPane().add(alu_registro); //SIEMPRE AGREGAR ESTO POR CADA OBJETO
     }
 
     /**
