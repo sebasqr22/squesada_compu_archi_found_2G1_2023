@@ -16,13 +16,23 @@ import javax.swing.JPanel;
  *
  * @author Sergio RC
  */
-public class JPanel_Uniciclo extends JLabel {
-    private int x,y;
+public class LineLabel extends JLabel {
+    private int width, height, x1, y1, x2, y2;
+    private Color color = Color.BLACK;
 
-    public JPanel_Uniciclo(JPanel panel) {
-        this.x=panel.getWidth();
-        this.y=panel.getHeight();
-        this.setSize(x,y);
+    public LineLabel(JPanel panel, int x1, int y1, int x2, int y2) {
+        this.width = panel.getWidth();
+        this.height = panel.getHeight();
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+        this.setSize(width, height);
+    }
+    
+    public void resaltarLinea(){
+        this.color = Color.GREEN;
+        this.repaint();
     }
 
     @Override
@@ -30,9 +40,8 @@ public class JPanel_Uniciclo extends JLabel {
         Graphics2D g2d=(Graphics2D)g;
         BasicStroke grosor=new BasicStroke(5);
         g2d.setStroke(grosor);
-        g2d.setColor(Color.BLUE);
+        g2d.setColor(this.color);
         
-        g2d.drawLine(5, 5, 50, 5);
+        g2d.drawLine(x1, y1, x2, y2);
     }   
-    
 }
