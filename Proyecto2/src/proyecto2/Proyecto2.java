@@ -99,7 +99,6 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel5.setText("jLabel5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pantallas.setBackground(new java.awt.Color(255, 255, 255));
         pantallas.setPreferredSize(new java.awt.Dimension(1083, 698));
