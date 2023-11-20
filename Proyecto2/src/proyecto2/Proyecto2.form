@@ -45,6 +45,8 @@
             </Group>
         </DimensionLayout>
     </Layout>
+
+
     <SubComponents>
         <Container class="javax.swing.JTabbedPane" name="pantallas">
             <Properties>
@@ -58,6 +60,7 @@
             </Properties>
 
             <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+
             <SubComponents>
                 <Container class="javax.swing.JPanel" name="menu">
                     <Properties>
@@ -119,6 +122,7 @@
                             </Group>
                         </DimensionLayout>
                     </Layout>
+
                     <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel1">
                             <Properties>
@@ -272,6 +276,7 @@
                             </Group>
                         </DimensionLayout>
                     </Layout>
+
                     <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel2">
                             <Properties>
@@ -629,7 +634,7 @@
                                 </Component>
                             </SubComponents>
                         </Container>
-                    </SubComponents>
+                    </SubComponents></SubComponents>
                 </Container></Container>
                 <Container class="javax.swing.JPanel" name="multiciclo">
                     <Properties>
