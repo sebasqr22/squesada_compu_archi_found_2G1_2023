@@ -804,15 +804,108 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                  <Component id="Label_Pc4_Multi" min="-2" pref="43" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                  <Component id="Label_Pc4_Multi1" min="-2" pref="54" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="Boton_PC_Multi1" min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="Boton_Memoria_Multi" min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="Boton_Decode_Multi2" min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Boton_Imm_Multi1" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Boton_Registros_Multi2" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="Boton_ALU_Multi2" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="420" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="112" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Boton_Registros_Multi2" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="Boton_Decode_Multi2" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="Boton_Memoria_Multi" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="Boton_PC_Multi1" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="Boton_ALU_Multi2" min="-2" pref="110" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="Boton_Imm_Multi1" min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="Label_Pc4_Multi" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="Label_Pc4_Multi1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="Boton_Memoria_Multi">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Memoria"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="Boton_PC_Multi1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="PC"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="Boton_Imm_Multi1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Imm"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_Imm_Multi1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="Boton_Decode_Multi2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Decode"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="Boton_Registros_Multi2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Registros"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="Boton_ALU_Multi2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="ALU"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="Label_Pc4_Multi">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+4"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="Label_Pc4_Multi1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="PC Target"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
           </SubComponents>
         </Container>
