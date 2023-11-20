@@ -19,12 +19,14 @@ public class Proyecto2 extends javax.swing.JFrame {
      * Creates new form a
      */
     private int pantallaSeleccionada = 1;
+    private LineasUniciclo lineas_uni;
   
     public Proyecto2() {
         initComponents();
         JPanelImage_Multicilclo imagenMulticiclo=new JPanelImage_Multicilclo(panel_multiciclo);
         panel_multiciclo.add(imagenMulticiclo).repaint();
         pantallas.setSelectedIndex(0);
+        lineas_uni = new LineasUniciclo(this.panel_uniciclo);
     }
 
     /**
@@ -36,6 +38,16 @@ public class Proyecto2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panel_uniciclo = new javax.swing.JPanel();
+        Boton_PC_Uni = new javax.swing.JButton();
+        Boton_Decode_Uni = new javax.swing.JButton();
+        Boton_Imem_Uni = new javax.swing.JButton();
+        Boton_Registro_Uni = new javax.swing.JButton();
+        Boton_Imm_Uni = new javax.swing.JButton();
+        Boton_ALU_uni = new javax.swing.JButton();
+        Boton_Dmem_Uni = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
@@ -87,6 +99,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel5.setText("jLabel5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pantallas.setBackground(new java.awt.Color(255, 255, 255));
         pantallas.setPreferredSize(new java.awt.Dimension(1083, 698));
@@ -165,6 +178,8 @@ public class Proyecto2 extends javax.swing.JFrame {
         );
 
         pantallas.addTab("tab1", menu);
+        uniciclo.setMinimumSize(new java.awt.Dimension(1083, 695));
+        uniciclo.setPreferredSize(new java.awt.Dimension(1083, 695));
 
         uniciclo.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -255,7 +270,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         valores_memoria_unicicloLayout.setHorizontalGroup(
             valores_memoria_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_memoria_unicicloLayout.createSequentialGroup()
-                .addContainerGap(137, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(105, 105, 105))
         );
@@ -267,18 +282,118 @@ public class Proyecto2 extends javax.swing.JFrame {
                 .addContainerGap(158, Short.MAX_VALUE))
         );
 
+        panel_uniciclo.setBackground(new java.awt.Color(255, 255, 255));
+
+        Boton_PC_Uni.setText("PC");
+        Boton_PC_Uni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_PC_UniActionPerformed(evt);
+            }
+        });
+
+        Boton_Decode_Uni.setText("Decodificador");
+        Boton_Decode_Uni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Decode_UniActionPerformed(evt);
+            }
+        });
+
+        Boton_Imem_Uni.setText("Memoria de instrucciones");
+        Boton_Imem_Uni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Imem_UniActionPerformed(evt);
+            }
+        });
+
+        Boton_Registro_Uni.setText("Registros");
+        Boton_Registro_Uni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Registro_UniActionPerformed(evt);
+            }
+        });
+
+        Boton_Imm_Uni.setText("Imm");
+        Boton_Imm_Uni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Imm_UniActionPerformed(evt);
+            }
+        });
+
+        Boton_ALU_uni.setText("ALU");
+        Boton_ALU_uni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_ALU_uniActionPerformed(evt);
+            }
+        });
+
+        Boton_Dmem_Uni.setText("Memoria de datos");
+        Boton_Dmem_Uni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Dmem_UniActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setText("+4");
+
+        jLabel16.setText("PC Target");
+
+        javax.swing.GroupLayout panel_unicicloLayout = new javax.swing.GroupLayout(panel_uniciclo);
+        panel_uniciclo.setLayout(panel_unicicloLayout);
+        panel_unicicloLayout.setHorizontalGroup(
+            panel_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_unicicloLayout.createSequentialGroup()
+                .addGap(539, 539, 539)
+                .addComponent(Boton_Imm_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(439, 448, Short.MAX_VALUE))
+            .addGroup(panel_unicicloLayout.createSequentialGroup()
+                .addGroup(panel_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_unicicloLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel16))
+                .addGap(46, 46, 46)
+                .addComponent(Boton_PC_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(Boton_Imem_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(Boton_Decode_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91)
+                .addComponent(Boton_Registro_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84)
+                .addComponent(Boton_ALU_uni, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
+                .addComponent(Boton_Dmem_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panel_unicicloLayout.setVerticalGroup(
+            panel_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_unicicloLayout.createSequentialGroup()
+                .addGroup(panel_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_unicicloLayout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addGroup(panel_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Boton_PC_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Boton_Imem_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Boton_Decode_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Boton_Registro_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Boton_ALU_uni, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Boton_Dmem_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panel_unicicloLayout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jLabel15)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel16)))
+                .addGap(34, 34, 34)
+                .addComponent(Boton_Imm_Uni, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         javax.swing.GroupLayout unicicloLayout = new javax.swing.GroupLayout(uniciclo);
         uniciclo.setLayout(unicicloLayout);
         unicicloLayout.setHorizontalGroup(
             unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(unicicloLayout.createSequentialGroup()
-                .addComponent(infor_ejecucion_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(valores_registro_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(valores_memoria_uniciclo, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
-            .addGroup(unicicloLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addContainerGap()
                 .addGroup(unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addGroup(unicicloLayout.createSequentialGroup()
@@ -289,28 +404,35 @@ public class Proyecto2 extends javax.swing.JFrame {
                         .addComponent(complete_uniciclo)
                         .addGap(36, 36, 36)
                         .addComponent(con_ciclo_a_uniciclo)
-                        .addGap(6, 6, 6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(segundos_field_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel4))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(unicicloLayout.createSequentialGroup()
+                .addComponent(infor_ejecucion_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valores_registro_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valores_memoria_uniciclo, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
+            .addComponent(panel_uniciclo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         unicicloLayout.setVerticalGroup(
             unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(unicicloLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addContainerGap()
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
                     .addComponent(step_by_step_uniciclo)
                     .addComponent(complete_uniciclo)
                     .addComponent(con_ciclo_a_uniciclo)
                     .addComponent(segundos_field_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(unicicloLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))))
-                .addGap(450, 450, 450)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panel_uniciclo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(infor_ejecucion_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valores_registro_uniciclo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -464,6 +586,8 @@ public class Proyecto2 extends javax.swing.JFrame {
                 Boton_ALU_MultiActionPerformed(evt);
             }
         });
+
+        
 
         Label_Pc4_Multi.setText("+4");
 
@@ -671,6 +795,35 @@ public class Proyecto2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Boton_ALU_MultiActionPerformed
 
+
+    private void Boton_PC_UniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_PC_UniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_PC_UniActionPerformed
+
+    private void Boton_Decode_UniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Decode_UniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Decode_UniActionPerformed
+
+    private void Boton_Imem_UniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Imem_UniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Imem_UniActionPerformed
+
+    private void Boton_Registro_UniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Registro_UniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Registro_UniActionPerformed
+
+    private void Boton_Imm_UniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Imm_UniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Imm_UniActionPerformed
+
+    private void Boton_ALU_uniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ALU_uniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_ALU_uniActionPerformed
+
+    private void Boton_Dmem_UniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Dmem_UniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Dmem_UniActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -708,6 +861,15 @@ public class Proyecto2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_ALU_uni;
+    private javax.swing.JButton Boton_Decode_Uni;
+    private javax.swing.JButton Boton_Dmem_Uni;
+    private javax.swing.JButton Boton_Imem_Uni;
+    private javax.swing.JButton Boton_Imm_Uni;
+    private javax.swing.JButton Boton_PC_Uni;
+    private javax.swing.JButton Boton_Registro_Uni;
+
+
     private javax.swing.JButton Boton_ALU_Multi;
     private javax.swing.JButton Boton_Decode_Multi;
     private javax.swing.JButton Boton_Imm_Multi;
@@ -732,6 +894,8 @@ public class Proyecto2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -742,6 +906,7 @@ public class Proyecto2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel menu;
     private javax.swing.JPanel multiciclo;
+    private javax.swing.JPanel panel_uniciclo;
     private javax.swing.JRadioButton multiciclo_radio;
     private javax.swing.JPanel panel_multiciclo;
     private javax.swing.JTabbedPane pantallas;
