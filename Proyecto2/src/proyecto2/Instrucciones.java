@@ -126,6 +126,39 @@ public class Instrucciones {
         area.setText(contenido);
     }
     
+    public void valoresReg(javax.swing.JTextArea area){
+        String contenido = "   00100293 x0 1\n" +
+"    10000317    0x10000\n" +
+"   ffc30313       x6 x6 -4\n" +
+"\n" +
+"   00530023 x5 0 x6\n" +
+"    005300a3        x5 1 x6\n" +
+"        00530123       x5 2 x6\n" +
+"     005301a3        x5 3 x6\n" +
+"     00530223        x5 4 x6\n" +
+"        005302a3        x5 5 x6\n" +
+"      00530323        x5 6 x6\n" +
+"        005303a3         x5 7 x6\n" +
+"        00530423        x5 8 x6\n" +
+"       005304a3        x5 9 x6\n" +
+"\n" +
+"   00500393        x7 x0 5\n" +
+"    00a00e13        x28 x0 10\n" +
+"\n" +
+"     00128293        x5 x5 1\n" +
+"          00528f33        x30 x5 x5\n" +
+"     0072da63        x5 x7 20 <end>\n" +
+"\n" +
+"         00030023        x0 0 x6\n" +
+"         005f0f33        x30 x30 x5\n" +
+"          ffcf56e3        x30 x28 -20\n" +
+"          ff5ff06f        x0 -12 \n" +
+"\n" +
+"      00000013        x0 x0 0";
+        
+        area.setText(contenido);
+    }
+    
     private void setCompleteTexto(javax.swing.JTextArea area){
         for(String i: instrucciones){
             area.append(i);
@@ -133,17 +166,19 @@ public class Instrucciones {
         }
     }
     
-    public void pintarUnicicloComplete(javax.swing.JTextArea area, LineasUniciclo lineas, javax.swing.JTextArea memoria){
+    public void pintarUnicicloComplete(javax.swing.JTextArea area, LineasUniciclo lineas, javax.swing.JTextArea memoria, javax.swing.JTextArea registro){
         setCompleteTexto(area);
         lineas.pintarCompleto();
         valoresMemoria(memoria);
+        valoresReg(registro);
     }
     
     
-    public void pintarMulticicloComplete(javax.swing.JTextArea area, LineasMulticiclo lineas, javax.swing.JTextArea memoria){
+    public void pintarMulticicloComplete(javax.swing.JTextArea area, LineasMulticiclo lineas, javax.swing.JTextArea memoria, javax.swing.JTextArea registro){
         setCompleteTexto(area);
         lineas.pintarCompleto();
         valoresMemoria(memoria);
+        valoresReg(registro);
     }
     
 }
