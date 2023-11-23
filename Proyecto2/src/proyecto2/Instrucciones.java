@@ -4,6 +4,8 @@
  */
 package proyecto2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ricar
@@ -80,4 +82,28 @@ public class Instrucciones {
             "ADDI t5, t0, t0", // t0 = 12
             "BGE t0, t2", // t0 > t2 (6 > 5)
         }; // El array contiene 1 en primos y 0 en los demás
+    
+    
+    public Instrucciones(){
+        
+    }
+    
+    private void setCompleteTexto(javax.swing.JTextArea area){
+        for(String i: instrucciones){
+            area.append(i);
+            area.append("\n");
+        }
+    }
+    
+    public void pintarUnicicloComplete(javax.swing.JTextArea area, LineasUniciclo lineas){
+        setCompleteTexto(area);
+        lineas.pintarCompleto();
+    }
+    
+    
+    public void pintarMulticicloComplete(javax.swing.JTextArea area, LineasMulticiclo lineas){
+        setCompleteTexto(area);
+        lineas.pintarCompleto();
+    }
+    
 }

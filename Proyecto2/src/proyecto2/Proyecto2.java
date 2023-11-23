@@ -21,6 +21,7 @@ public class Proyecto2 extends javax.swing.JFrame {
     private int pantallaSeleccionada = 1;
     private LineasUniciclo lineas_uni;
     private LineasMulticiclo lineas_multi;
+    private Instrucciones instrucciones;
     
     //Lineas para uniciclo
 
@@ -30,6 +31,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         pantallas.setSelectedIndex(0);
         lineas_uni = new LineasUniciclo(this.panel_uniciclo);
         lineas_multi =new LineasMulticiclo(this.panel_multiciclo);
+        instrucciones = new Instrucciones();
     }
 
     /**
@@ -61,6 +63,8 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         infor_ejecucion_uniciclo = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        uniciclo_info = new javax.swing.JTextArea();
         valores_registro_uniciclo = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         valores_memoria_uniciclo = new javax.swing.JPanel();
@@ -85,6 +89,8 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         info_ejecucion_multiciclo = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        multi_complete = new javax.swing.JTextArea();
         valores_registro_multiciclo = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         valores_memoria_multiciclo = new javax.swing.JPanel();
@@ -102,7 +108,6 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel5.setText("jLabel5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pantallas.setBackground(new java.awt.Color(255, 255, 255));
         pantallas.setPreferredSize(new java.awt.Dimension(1083, 698));
@@ -224,6 +229,10 @@ public class Proyecto2 extends javax.swing.JFrame {
 
         jLabel6.setText("Información de Ejecución");
 
+        uniciclo_info.setColumns(20);
+        uniciclo_info.setRows(5);
+        jScrollPane1.setViewportView(uniciclo_info);
+
         javax.swing.GroupLayout infor_ejecucion_unicicloLayout = new javax.swing.GroupLayout(infor_ejecucion_uniciclo);
         infor_ejecucion_uniciclo.setLayout(infor_ejecucion_unicicloLayout);
         infor_ejecucion_unicicloLayout.setHorizontalGroup(
@@ -231,14 +240,20 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(infor_ejecucion_unicicloLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(jLabel6)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
+            .addGroup(infor_ejecucion_unicicloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         infor_ejecucion_unicicloLayout.setVerticalGroup(
             infor_ejecucion_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(infor_ejecucion_unicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         valores_registro_uniciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -251,7 +266,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         valores_registro_unicicloLayout.setHorizontalGroup(
             valores_registro_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_registro_unicicloLayout.createSequentialGroup()
-                .addContainerGap(147, Short.MAX_VALUE)
+                .addContainerGap(136, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(111, 111, 111))
         );
@@ -260,7 +275,7 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_registro_unicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         valores_memoria_uniciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -282,7 +297,7 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_memoria_unicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         panel_uniciclo.setBackground(new java.awt.Color(255, 255, 255));
@@ -484,6 +499,10 @@ public class Proyecto2 extends javax.swing.JFrame {
 
         jLabel12.setText("Información de Ejecución");
 
+        multi_complete.setColumns(20);
+        multi_complete.setRows(5);
+        jScrollPane2.setViewportView(multi_complete);
+
         javax.swing.GroupLayout info_ejecucion_multicicloLayout = new javax.swing.GroupLayout(info_ejecucion_multiciclo);
         info_ejecucion_multiciclo.setLayout(info_ejecucion_multicicloLayout);
         info_ejecucion_multicicloLayout.setHorizontalGroup(
@@ -491,14 +510,20 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(info_ejecucion_multicicloLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(jLabel12)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
+            .addGroup(info_ejecucion_multicicloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         info_ejecucion_multicicloLayout.setVerticalGroup(
             info_ejecucion_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(info_ejecucion_multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         valores_registro_multiciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -511,7 +536,7 @@ public class Proyecto2 extends javax.swing.JFrame {
         valores_registro_multicicloLayout.setHorizontalGroup(
             valores_registro_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_registro_multicicloLayout.createSequentialGroup()
-                .addContainerGap(147, Short.MAX_VALUE)
+                .addContainerGap(136, Short.MAX_VALUE)
                 .addComponent(jLabel13)
                 .addGap(111, 111, 111))
         );
@@ -520,7 +545,7 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_registro_multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel13)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         valores_memoria_multiciclo.setBackground(new java.awt.Color(204, 204, 204));
@@ -542,7 +567,7 @@ public class Proyecto2 extends javax.swing.JFrame {
             .addGroup(valores_memoria_multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         Boton_Memoria_Multi.setText("Memoria");
@@ -591,7 +616,7 @@ public class Proyecto2 extends javax.swing.JFrame {
                         .addComponent(Boton_Registros_Multi2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(Boton_ALU_Multi2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
         panel_multicicloLayout.setVerticalGroup(
             panel_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -670,7 +695,16 @@ public class Proyecto2 extends javax.swing.JFrame {
 
         pantallas.addTab("tab3", multiciclo);
 
-        getContentPane().add(pantallas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -34, -1, 730));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pantallas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pantallas, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -681,7 +715,8 @@ public class Proyecto2 extends javax.swing.JFrame {
 
     private void complete_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_multicicloActionPerformed
         // TODO add your handling code here:
-        
+        multi_complete.setText("");
+        instrucciones.pintarMulticicloComplete(multi_complete, lineas_multi);
     }//GEN-LAST:event_complete_multicicloActionPerformed
 
     private void step_by_step_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_step_by_step_multicicloActionPerformed
@@ -696,6 +731,8 @@ public class Proyecto2 extends javax.swing.JFrame {
 
     private void complete_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_unicicloActionPerformed
         // TODO add your handling code here:
+        uniciclo_info.setText("");
+        instrucciones.pintarUnicicloComplete(uniciclo_info, lineas_uni);
     }//GEN-LAST:event_complete_unicicloActionPerformed
 
     private void step_by_step_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_step_by_step_unicicloActionPerformed
@@ -846,7 +883,10 @@ public class Proyecto2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel menu;
+    private javax.swing.JTextArea multi_complete;
     private javax.swing.JPanel multiciclo;
     private javax.swing.JRadioButton multiciclo_radio;
     private javax.swing.JPanel panel_multiciclo;
@@ -857,6 +897,7 @@ public class Proyecto2 extends javax.swing.JFrame {
     private javax.swing.JButton step_by_step_multiciclo;
     private javax.swing.JButton step_by_step_uniciclo;
     private javax.swing.JPanel uniciclo;
+    private javax.swing.JTextArea uniciclo_info;
     private javax.swing.JRadioButton uniciclo_radio;
     private javax.swing.JPanel valores_memoria_multiciclo;
     private javax.swing.JPanel valores_memoria_uniciclo;

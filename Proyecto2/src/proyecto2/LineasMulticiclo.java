@@ -166,4 +166,41 @@ public class LineasMulticiclo extends JLabel {
         this.panel_multiciclo.add(this.memoria_ALU_5).repaint();
     }
     
+    public void resaltarCamino(ArrayList<LineLabel> camino){
+        for(LineLabel linea: camino)
+            linea.resaltarLinea();
+    }
+    
+    public void pintarCompleto(){
+        ArrayList<LineLabel> camino = new ArrayList<>();
+        camino.add(mas4_Pc);
+        camino.add(memoria_deco);
+        camino.add(deco_imm_1);
+        camino.add(deco_imm_2);
+        camino.add(deco_imm_3);
+
+        camino.add(pc_memoria);
+
+        
+        camino.add(imm_ALU_1);
+        camino.add(imm_ALU_2);
+        camino.add(imm_ALU_3);
+
+        camino.add(deco_registro_1);
+        camino.add(deco_registro_3);
+
+        camino.add(registro_ALU_1);
+        camino.add(registro_ALU_2);
+        camino.add(ALU_Registro_1);
+        camino.add(ALU_Registro_2);
+        camino.add(ALU_Registro_3);
+        camino.add(ALU_Registro_4);
+        camino.add(ALU_Registro_5);
+
+        camino.add(ALU_Registro_2);
+
+        
+        resaltarCamino(camino);
+        
+    }
 }

@@ -160,4 +160,28 @@ public class LineasUniciclo {
             linea.resaltarLinea();
     }
     
+    public void pintarCompleto(){
+        ArrayList<LineLabel> camino = new ArrayList<>();
+        camino.add(mas4_Pc);
+        camino.add(pc_Imemoria);
+        camino.add(memoria_deco);
+        camino.add(deco_imm1);
+        camino.add(deco_imm2);
+        camino.add(deco_imm3);
+        camino.add(ALU_Registro_2);
+        
+        
+        camino.add(imm_ALU_1);
+        camino.add(imm_ALU_2);
+        camino.add(imm_ALU_3);
+        camino.add(memD_reg_1);
+        camino.add(memD_reg_2);
+        camino.add(memD_reg_3); 
+        camino.add(memD_reg_4); 
+        camino.add(memD_reg_5); 
+        
+        resaltarCamino(camino);
+        
+    }
+    
 }
