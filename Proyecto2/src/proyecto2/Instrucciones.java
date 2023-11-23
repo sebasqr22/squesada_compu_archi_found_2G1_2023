@@ -88,6 +88,44 @@ public class Instrucciones {
         
     }
     
+    public void valoresMemoria(javax.swing.JTextArea area){
+        String contenido = "0:        00100293        addi x5 x0 1\n" +
+"    4:        10000317        auipc x6 0x10000\n" +
+"    8:        ffc30313        addi x6 x6 -4\n" +
+"\n" +
+"0000000c <init>:\n" +
+"    c:        00530023        sb x5 0 x6\n" +
+"    10:        005300a3        sb x5 1 x6\n" +
+"    14:        00530123        sb x5 2 x6\n" +
+"    18:        005301a3        sb x5 3 x6\n" +
+"    1c:        00530223        sb x5 4 x6\n" +
+"    20:        005302a3        sb x5 5 x6\n" +
+"    24:        00530323        sb x5 6 x6\n" +
+"    28:        005303a3        sb x5 7 x6\n" +
+"    2c:        00530423        sb x5 8 x6\n" +
+"    30:        005304a3        sb x5 9 x6\n" +
+"\n" +
+"00000034 <end_init>:\n" +
+"    34:        00500393        addi x7 x0 5\n" +
+"    38:        00a00e13        addi x28 x0 10\n" +
+"\n" +
+"0000003c <loop_principal>:\n" +
+"    3c:        00128293        addi x5 x5 1\n" +
+"    40:        00528f33        add x30 x5 x5\n" +
+"    44:        0072da63        bge x5 x7 20 <end>\n" +
+"\n" +
+"00000048 <loop_secundario>:\n" +
+"    48:        00030023        sb x0 0 x6\n" +
+"    4c:        005f0f33        add x30 x30 x5\n" +
+"    50:        ffcf56e3        bge x30 x28 -20 <loop_principal>\n" +
+"    54:        ff5ff06f        jal x0 -12 <loop_secundario>\n" +
+"\n" +
+"00000058 <end>:\n" +
+"    58:        00000013        addi x0 x0 0";
+        
+        area.setText(contenido);
+    }
+    
     private void setCompleteTexto(javax.swing.JTextArea area){
         for(String i: instrucciones){
             area.append(i);
@@ -95,15 +133,17 @@ public class Instrucciones {
         }
     }
     
-    public void pintarUnicicloComplete(javax.swing.JTextArea area, LineasUniciclo lineas){
+    public void pintarUnicicloComplete(javax.swing.JTextArea area, LineasUniciclo lineas, javax.swing.JTextArea memoria){
         setCompleteTexto(area);
         lineas.pintarCompleto();
+        valoresMemoria(memoria);
     }
     
     
-    public void pintarMulticicloComplete(javax.swing.JTextArea area, LineasMulticiclo lineas){
+    public void pintarMulticicloComplete(javax.swing.JTextArea area, LineasMulticiclo lineas, javax.swing.JTextArea memoria){
         setCompleteTexto(area);
         lineas.pintarCompleto();
+        valoresMemoria(memoria);
     }
     
 }

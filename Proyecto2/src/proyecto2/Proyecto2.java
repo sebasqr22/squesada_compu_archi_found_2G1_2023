@@ -69,6 +69,8 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         valores_memoria_uniciclo = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        valores_memoria_uni = new javax.swing.JTextArea();
         panel_uniciclo = new javax.swing.JPanel();
         Boton_PC_Uni = new javax.swing.JButton();
         Boton_Decode_Uni = new javax.swing.JButton();
@@ -95,6 +97,8 @@ public class Proyecto2 extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         valores_memoria_multiciclo = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
+        valores_memori = new javax.swing.JScrollPane();
+        valores_memoria_multi = new javax.swing.JTextArea();
         panel_multiciclo = new javax.swing.JPanel();
         Boton_Memoria_Multi = new javax.swing.JButton();
         Boton_PC_Multi1 = new javax.swing.JButton();
@@ -283,21 +287,31 @@ public class Proyecto2 extends javax.swing.JFrame {
 
         jLabel8.setText("Valores de Memoria");
 
+        valores_memoria_uni.setColumns(20);
+        valores_memoria_uni.setRows(5);
+        jScrollPane3.setViewportView(valores_memoria_uni);
+
         javax.swing.GroupLayout valores_memoria_unicicloLayout = new javax.swing.GroupLayout(valores_memoria_uniciclo);
         valores_memoria_uniciclo.setLayout(valores_memoria_unicicloLayout);
         valores_memoria_unicicloLayout.setHorizontalGroup(
             valores_memoria_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_memoria_unicicloLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(128, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(105, 105, 105))
+            .addGroup(valores_memoria_unicicloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3)
+                .addContainerGap())
         );
         valores_memoria_unicicloLayout.setVerticalGroup(
             valores_memoria_unicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(valores_memoria_unicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         panel_uniciclo.setBackground(new java.awt.Color(255, 255, 255));
@@ -553,21 +567,31 @@ public class Proyecto2 extends javax.swing.JFrame {
 
         jLabel14.setText("Valores de Memoria");
 
+        valores_memoria_multi.setColumns(20);
+        valores_memoria_multi.setRows(5);
+        valores_memori.setViewportView(valores_memoria_multi);
+
         javax.swing.GroupLayout valores_memoria_multicicloLayout = new javax.swing.GroupLayout(valores_memoria_multiciclo);
         valores_memoria_multiciclo.setLayout(valores_memoria_multicicloLayout);
         valores_memoria_multicicloLayout.setHorizontalGroup(
             valores_memoria_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valores_memoria_multicicloLayout.createSequentialGroup()
-                .addContainerGap(137, Short.MAX_VALUE)
+                .addContainerGap(128, Short.MAX_VALUE)
                 .addComponent(jLabel14)
                 .addGap(105, 105, 105))
+            .addGroup(valores_memoria_multicicloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(valores_memori)
+                .addContainerGap())
         );
         valores_memoria_multicicloLayout.setVerticalGroup(
             valores_memoria_multicicloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(valores_memoria_multicicloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valores_memori, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         Boton_Memoria_Multi.setText("Memoria");
@@ -716,7 +740,7 @@ public class Proyecto2 extends javax.swing.JFrame {
     private void complete_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_multicicloActionPerformed
         // TODO add your handling code here:
         multi_complete.setText("");
-        instrucciones.pintarMulticicloComplete(multi_complete, lineas_multi);
+        instrucciones.pintarMulticicloComplete(multi_complete, lineas_multi, valores_memoria_multi);
     }//GEN-LAST:event_complete_multicicloActionPerformed
 
     private void step_by_step_multicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_step_by_step_multicicloActionPerformed
@@ -732,7 +756,7 @@ public class Proyecto2 extends javax.swing.JFrame {
     private void complete_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complete_unicicloActionPerformed
         // TODO add your handling code here:
         uniciclo_info.setText("");
-        instrucciones.pintarUnicicloComplete(uniciclo_info, lineas_uni);
+        instrucciones.pintarUnicicloComplete(uniciclo_info, lineas_uni, valores_memoria_uni);
     }//GEN-LAST:event_complete_unicicloActionPerformed
 
     private void step_by_step_unicicloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_step_by_step_unicicloActionPerformed
@@ -885,6 +909,7 @@ public class Proyecto2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel menu;
     private javax.swing.JTextArea multi_complete;
     private javax.swing.JPanel multiciclo;
@@ -899,7 +924,10 @@ public class Proyecto2 extends javax.swing.JFrame {
     private javax.swing.JPanel uniciclo;
     private javax.swing.JTextArea uniciclo_info;
     private javax.swing.JRadioButton uniciclo_radio;
+    private javax.swing.JScrollPane valores_memori;
+    private javax.swing.JTextArea valores_memoria_multi;
     private javax.swing.JPanel valores_memoria_multiciclo;
+    private javax.swing.JTextArea valores_memoria_uni;
     private javax.swing.JPanel valores_memoria_uniciclo;
     private javax.swing.JPanel valores_registro_multiciclo;
     private javax.swing.JPanel valores_registro_uniciclo;
